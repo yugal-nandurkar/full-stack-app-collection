@@ -1,0 +1,63 @@
+###############################
+# Core EditorConfig Options   #
+###############################
+root = true
+
+# All files
+[*]
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+charset = utf-8
+
+# Java files
+[*.java]
+indent_size = 4
+max_line_length = 120
+continuation_indent_size = 8
+tab_width = 4
+trim_trailing_whitespace = true
+
+###############################
+# Java Formatting Rules       #
+###############################
+# Newline preferences
+insert_final_newline = true
+
+# Code conventions
+ij_java_align_multiline_binary_operation = true
+ij_java_align_multiline_parameters = true
+ij_java_align_multiline_method_chains = true
+ij_java_blank_lines_around_class = 1
+ij_java_blank_lines_around_method = 1
+ij_java_blank_lines_after_package = 1
+ij_java_blank_lines_before_imports = 1
+ij_java_wrap_long_lines = true
+
+# Import order
+ij_java_imports_layout = java.*,javax.*,org.springframework.*,<all_other_imports>
+
+# Lambda formatting
+ij_java_wrap_lambda_parameters = false
+
+###############################
+# Naming Conventions          #
+###############################
+[*.java]
+# Class names: PascalCase
+ij_java_class_naming_style = PascalCase
+
+# Variable names: camelCase
+ij_java_variable_naming_style = camelCase
+
+# Constant names: UPPER_SNAKE_CASE
+ij_java_constant_naming_style = UPPER_SNAKE_CASE
+
+###############################
+# XML Formatting Rules        #
+###############################
+[*.xml]
+indent_size = 2
+tab_width = 2
+max_line_length = 120
+trim_trailing_whitespace = true

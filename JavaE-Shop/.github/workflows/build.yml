@@ -1,0 +1,47 @@
+name: Build and Test Spring Boot App
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+env:
+  TEAM_NAME: dotnet-aspire
+
+jobs:
+  build:
+    name: Build and Test
+    runs-on: windows-2019 # Matches the Azure DevOps pool image
+    timeout-minutes: 90 # Matches the job timeout setting
+
+    steps:
+      # Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Set up JDK 23 (or your required version)
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: 23
+
+      # Cache Maven dependencies to speed up builds
+      - name: Cache Maven dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      # Build the Spring Boot application
+      - name: Build with Maven
+        run: mvn clean install -DskipTests
+
+      # Run tests (optional)
+      - name: Run Tests
+        run: mvn test

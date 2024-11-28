@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.4.0</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>microteam</groupId>
+    <artifactId>JavaE-Shop</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>java-e-shop</name>
+    <description>java-e-shop</description>
+    <url/>
+    <licenses>
+        <license/>
+    </licenses>
+    <developers>
+        <developer/>
+    </developers>
+    <scm>
+        <connection/>
+        <developerConnection/>
+        <tag/>
+        <url/>
+    </scm>
+    <properties>
+        <java.version>23</java.version>
+        <spring-ai.version>1.0.0-M4</spring-ai.version>
+    </properties>
+
+    <dependencies>
+        <!-- Spring Boot Starter for Web (for building REST APIs) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <resources>
+            <!-- Copy Pics to Output Directory -->
+            <resource>
+                <directory>src/main/resources/static/pics</directory>
+                <includes>
+                    <include>*.webp</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <!-- Protobuf plugin for gRPC -->
+            <plugin>
+                <groupId>org.xolstice.maven.plugins</groupId>
+                <artifactId>protobuf-maven-plugin</artifactId>
+                <version>0.6.1</version>
+                <configuration>
+                    <protocExecutable>/path/to/protoc</protocExecutable> <!-- Update with protoc path -->
+                    <pluginId>grpc-java</pluginId>
+                    <outputDirectory>${project.build.directory}/generated-sources/protobuf/java</outputDirectory>
+                    <pluginExecutable>protoc-gen-grpc-java</pluginExecutable> <!-- Update with plugin path -->
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                            <goal>compile-custom</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <!-- Compiler Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>4.0.0-beta-1</version>
+            </plugin>
+        </plugins>
+    </build>
+    <modules>
+        <module>Basket.API</module>
+        <module>Catalog.API</module>
+        <module>EventBusRabbitMQ</module>
+        <module>EventBus</module>
+        <module>Identity.API</module>
+        <module>IntegrationEventLogEF</module>
+        <module>Mobile.Bff.Shopping</module>
+        <module>Ordering.API</module>
+        <module>OrderProcessor</module>
+        <module>Ordering.Domain</module>
+        <module>Ordering.Infrastructure</module>
+        <module>PaymentProcessor</module>
+        <module>WebAppComponents</module>
+        <module>WebApp</module>
+        <module>WebhookClient</module>
+        <module>Webhooks.API</module>
+        <module>eShop.AppHost</module>
+        <module>eShop.ServiceDefaults</module>
+        <module>Basket.UnitTests</module>
+        <module>Catalog.FunctionalTests</module>
+        <module>Ordering.FunctionalTests</module>
+        <module>Ordering.UnitTests</module>
+    </modules>
+</project>
