@@ -109,6 +109,7 @@
         <module>Ordering.Domain</module>
         <module>Ordering.Infrastructure</module>
         <module>PaymentProcessor</module>
+        <module>Root</module>
         <module>WebAppComponents</module>
         <module>WebApp</module>
         <module>WebhookClient</module>

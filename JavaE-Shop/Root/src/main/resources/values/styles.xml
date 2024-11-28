@@ -1,0 +1,27 @@
+<resources>
+  <!-- Define global colors -->
+  <color name="pageBackgroundColor">#512bdf</color>
+  <color name="primaryTextColor">#FFFFFF</color>
+  <color name="buttonBackgroundColor">#2b0b98</color>
+
+  <!-- Define global styles -->
+  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="android:colorBackground">@color/pageBackgroundColor</item>
+    <item name="android:textColor">@color/primaryTextColor</item>
+  </style>
+
+  <style name="LabelStyle">
+    <item name="android:textColor">@color/primaryTextColor</item>
+    <item name="android:fontFamily">@font/opensans_regular</item>
+  </style>
+
+  <style name="ButtonStyle">
+    <item name="android:textColor">@color/primaryTextColor</item>
+    <item name="android:fontFamily">@font/opensans_regular</item>
+    <item name="android:background">@color/buttonBackgroundColor</item>
+    <item name="android:paddingLeft">14dp</item>
+    <item name="android:paddingRight">14dp</item>
+    <item name="android:paddingTop">10dp</item>
+    <item name="android:paddingBottom">10dp</item>
+  </style>
+</resources>

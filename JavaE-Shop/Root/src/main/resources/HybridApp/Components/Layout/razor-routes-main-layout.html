@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>eShop App</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+</head>
+<body>
+<header th:replace="fragments/header :: header"></header>
+<main>
+    <div th:replace="fragments/body :: body"></div>
+</main>
+<footer th:replace="fragments/footer :: footer"></footer>
+</body>
+</html>

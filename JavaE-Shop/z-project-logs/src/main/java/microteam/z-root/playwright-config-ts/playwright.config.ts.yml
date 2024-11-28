@@ -1,4 +1,0 @@
-# application.properties or application.yml
-base.url=http://localhost:5045
-CI=true
-STORAGE_STATE=path/to/auth/file

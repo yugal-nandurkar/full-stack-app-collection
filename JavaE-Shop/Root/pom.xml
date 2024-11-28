@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.4.0</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
+  <groupId>microteam</groupId>
+  <artifactId>Root</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>Root</name>
+  <description>Root</description>
+  <url/>
+  <licenses>
+    <license/>
+  </licenses>
+  <developers>
+    <developer/>
+  </developers>
+  <scm>
+    <connection/>
+    <developerConnection/>
+    <tag/>
+    <url/>
+  </scm>
+  <properties>
+    <java.version>23</java.version>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-tomcat</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium.client-drivers/selenium-java-client-driver -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium.client-drivers</groupId>
+      <artifactId>selenium-java-client-driver</artifactId>
+      <version>1.0.2</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>4.27.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-android-extensions-runtime -->
+    <dependency>
+      <groupId>org.jetbrains.kotlin</groupId>
+      <artifactId>kotlin-android-extensions-runtime</artifactId>
+      <version>2.1.0</version>
+      <scope>runtime</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/net.morimekta.utils/android-util -->
+    <dependency>
+      <groupId>net.morimekta.utils</groupId>
+      <artifactId>android-util</artifactId>
+      <version>3.0.1</version>
+    </dependency>
+<!--    &lt;!&ndash; https://mvnrepository.com/artifact/androidx.appcompat/appcompat &ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>androidx.appcompat</groupId>-->
+<!--      <artifactId>appcompat</artifactId>-->
+<!--      <version>1.7.0</version>-->
+<!--      <scope>runtime</scope>-->
+<!--    </dependency>-->
+
+    <!--    &lt;!&ndash; https://mvnrepository.com/artifact/androidx.webkit/webkit &ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>androidx.webkit</groupId>-->
+<!--      <artifactId>webkit</artifactId>-->
+<!--      <version>1.13.0-alpha01</version>-->
+<!--      <scope>runtime</scope>-->
+<!--    </dependency>-->
+    <!-- https://mvnrepository.com/artifact/com.google.android/android -->
+    <dependency>
+      <groupId>com.google.android</groupId>
+      <artifactId>android</artifactId>
+      <version>4.1.1.4</version>
+      <scope>provided</scope>
+    </dependency>
+<!--    &lt;!&ndash; https://mvnrepository.com/artifact/com.android.support/appcompat-v7 &ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>com.android.support</groupId>-->
+<!--      <artifactId>appcompat-v7</artifactId>-->
+<!--      <version>28.0.0</version>-->
+<!--    </dependency>-->
+<!--    &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework/org.springframework.orm &ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework</groupId>-->
+<!--      <artifactId>org.springframework.orm</artifactId>-->
+<!--      <version>3.2.2.RELEASE</version>-->
+<!--    </dependency>-->
+    <!-- https://mvnrepository.com/artifact/javax.persistence/javax.persistence-api -->
+    <dependency>
+      <groupId>javax.persistence</groupId>
+      <artifactId>javax.persistence-api</artifactId>
+      <version>2.2</version>
+    </dependency>
+<!--    &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework/org.springframework.transaction &ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework</groupId>-->
+<!--      <artifactId>org.springframework.transaction</artifactId>-->
+<!--      <version>3.2.2.RELEASE</version>-->
+<!--    </dependency>-->
+
+
+    <dependency>
+      <groupId>microteam</groupId>
+      <artifactId>WebAppComponents</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-batch</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.batch</groupId>
+      <artifactId>spring-batch-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+    <!--    &lt;!&ndash; https://mvnrepository.com/artifact/org.webjars.npm/selenium-webdriver &ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>org.webjars.npm</groupId>-->
+<!--      <artifactId>selenium-webdriver</artifactId>-->
+<!--      <version>4.10.0</version>-->
+<!--    </dependency>-->
+    <!-- https://mvnrepository.com/artifact/io.opentelemetry/opentelemetry-api -->
+    <dependency>
+      <groupId>io.opentelemetry</groupId>
+      <artifactId>opentelemetry-api</artifactId>
+      <version>1.44.1</version>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

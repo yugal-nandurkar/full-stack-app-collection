@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/pageBackgroundColor">
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    style="@style/LabelStyle"
+    android:text="Welcome to eShop!" />
+
+  <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    style="@style/ButtonStyle"
+    android:text="Shop Now" />
+
+  <WebView
+    android:id="@+id/blazorWebView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/windowBackground" />
+</LinearLayout>
