@@ -12,7 +12,7 @@
     {
         var returnUrl = ReturnUrl ?? "/";
         var url = new Uri(returnUrl, UriKind.RelativeOrAbsolute);
-        Nav.NavigateTo(url.IsAbsoluteUri ? "/" : returnUrl);
+        /* Nav.NavigateTo(url.IsAbsoluteUri ? "/" : returnUrl); */
         await base.OnInitializedAsync();
     }
 

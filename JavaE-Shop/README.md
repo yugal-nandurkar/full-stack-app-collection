@@ -1,4 +1,6 @@
 # eShop Reference Application - "AdventureWorks"
+# This part of the repository (https://github.com/yugal-nandurkar/full-stack-app-collection/tree/main/JavaE-Shop) is an ongoing work that can span for months.
+# This work involves transformation of C# based code to relevant java counterpart.
 
 A reference Spring application implementing an e-commerce website using a services-based architecture using Java.
 Spring Boot Reference Application - "AdventureWorks"
